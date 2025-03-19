@@ -1,0 +1,211 @@
+Basic concepts of Python :
+
+1. Variables and Data Types
+
+Python data types:
+integers, floats, strings, and booleans.
+
+# Variable assignment
+x = 11            # Integer
+y = 4.12          # Float
+name = "Naveen"    # String
+is_active = True  # Boolean
+
+
+# Print the variables
+print(x, y, name, is_active)
+
+
+2. Basic Arithmetic
+addition, subtraction, multiplication, and division.
+
+# Basic arithmetic
+a = 8
+b = 2
+
+sum_result = a + b  # Addition
+diff_result = a - b  # Subtraction
+prod_result = a * b  # Multiplication
+quot_result = a / b  # Division
+
+print("Sum:", sum_result)
+print("Difference:", diff_result)
+print("Product:", prod_result)
+print("Quotient:", quot_result)
+
+
+3. Conditional Statements (If-Else)
+You can use if, elif, and else to make decisions.
+
+age = 20
+
+if age < 18:
+    print("You are a minor.")
+elif age == 18:
+    print("You just became an adult.")
+else:
+    print("You are an adult.")
+
+
+4. Loops (For and While)
+Loops are used to repeat a block of code multiple times.
+for loop:
+
+# Iterate over a range of numbers
+for i in range(5):
+    print(i)
+while loop:
+
+# Using while loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1  # Increment the counter
+
+
+5. Functions
+Functions allow you to group reusable code together.
+
+# Define a function
+def greet(name):
+    return "Hello, " + name + "!"
+
+# Call the function
+message = greet("Naveen")
+print(message)
+
+
+6. Lists
+A list is a collection of items, which can be of different types.
+
+# List with different types of elements
+fruits = ["apple", "banana", "cherry"]
+
+# Accessing elements
+print(fruits[0])  # Prints 'apple'
+
+# Adding elements
+fruits.append("orange")
+
+# Iterating over a list
+for fruit in fruits:
+    print(fruit)
+
+
+7. Dictionaries
+A dictionary is a collection of key-value pairs.
+
+# Define a dictionary
+person = {
+    "name": "Naveen",
+    "age": 30,
+    "city": " Vellore"
+}
+
+# Access values by key
+print(person["name"])  # Prints 'Naveen'
+
+# Adding a new key-value pair
+person["job"] = "Engineer"
+print(person)
+
+
+8. Exception Handling (Try-Except)
+Use try-except to handle errors gracefully.
+
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+    print("Result:", result)
+
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+
+except ValueError:
+    print("That's not a valid number!")
+
+9. Classes and Objects
+Python supports object-oriented programming with classes and objects.
+
+# Define a class
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return "Hello, my name is " + self.name
+
+# Create an object of the class
+person1 = Person("Naveen", 30)
+print(person1.greet())
+
+10. Slicing a List
+
+sequence[start:stop:step]
+
+# List
+fruits = ["apple", "banana", "cherry", "date", "elderberry", "fig"]
+
+# Slice from index 1 to 4 (exclusive of index 4)
+sliced_fruits = fruits[1:4]
+print(sliced_fruits)  # Output: ['banana', 'cherry', 'date']
+
+# Slice with step (every 2nd element)
+sliced_fruits_step = fruits[::2]
+print(sliced_fruits_step)  # Output: ['apple', 'cherry', 'elderberry']
+
+10.1. Slicing a String
+
+# String
+text = "Hello, World!"
+
+# Slice from index 0 to 5 (exclusive of index 5)
+sliced_text = text[0:5]
+print(sliced_text)  # Output: 'Hello'
+
+# Slice from index 7 to end
+sliced_text_end = text[7:]
+print(sliced_text_end)  # Output: 'World!'
+
+# Slice with step (every 2nd character)
+sliced_text_step = text[::2]
+print(sliced_text_step)  # Output: 'Hoo ol!'
+
+10.2. Slicing a Tuple
+
+# Tuple
+numbers = (10, 20, 30, 40, 50, 60)
+
+# Slice from index 2 to 5 (exclusive of index 5)
+sliced_numbers = numbers[2:5]
+print(sliced_numbers)  # Output: (30, 40, 50)
+
+# Slice with step (every 2nd element)
+sliced_numbers_step = numbers[::2]
+print(sliced_numbers_step)  # Output: (10, 30, 50)
+
+10.3. Negative Indexing
+You can also use negative indices to slice from the end of the sequence.
+
+# List with negative indexing
+fruits = ["apple", "banana", "cherry", "date", "elderberry"]
+
+# Slice from the 2nd last to the end
+sliced_fruits_negative = fruits[-2:]
+print(sliced_fruits_negative)  # Output: ['date', 'elderberry']
+
+# Slice the last 3 elements
+sliced_fruits_last_three = fruits[-3:]
+print(sliced_fruits_last_three)  # Output: ['cherry', 'date', 'elderberry']
+
+# Slice all elements except the last one
+sliced_fruits_all_except_last = fruits[:-1]
+print(sliced_fruits_all_except_last)  # Output: ['apple', 'banana', 'cherry', 'date']
+
+Summary of Slicing Notation:
+sequence[start:stop]: Slice from start index to stop index (exclusive).
+sequence[start:stop:step]: Slice from start to stop with a given step.
+sequence[:stop]: Slice from the beginning to stop.
+sequence[start:]: Slice from start to the end.
+sequence[::-1]: Reverse the sequence.
